@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { createLogger } from 'redux-logger';
-import { rocketsSlice } from './rocket/rocketSlice';
+import { rocketSlice } from './rocket/rocketSlice';
 
 const logger = createLogger({
   // Options for the logger can be passed here
@@ -12,7 +12,7 @@ const logger = createLogger({
 
 const store = configureStore({
   reducer: {
-    rockets: rocketsSlice,
+    rockets: rocketSlice,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });
