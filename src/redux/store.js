@@ -1,21 +1,18 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import { createLogger } from 'redux-logger';
-import { rocketSlice } from './rocket/rocketSlice';
+import rocketReducer from './rocket/rocketSlice';
 import missionsReducer from './missions/missionsSlice';
 
 const logger = createLogger({
-  // Options for the logger can be passed here
-  // Show only the actions in the console
   predicate: (getState, action) => action.type !== 'SOME_ACTION',
-  // Collapse the logs by default
   collapsed: true,
 });
 
 const store = configureStore({
-  reducer: {
-    rockets: rocketSlice,
+  reducer: combineReducers({
+    rockets: rocketReducer,
     missions: missionsReducer,
-  },
+  }),
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });
 

@@ -3,9 +3,12 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { useSelector } from 'react-redux';
+import styles from './Profile.module.css';
+import { selectReservedRockets } from '../redux/rocket/rocketSlice';
 
 function Profile() {
   const missions = useSelector((state) => state.missions.missionstore);
+  const reservedRockets = useSelector(selectReservedRockets);
   return (
     <div className="px-2 pr-2">
       <Row>
@@ -31,13 +34,15 @@ function Profile() {
           className="pe-lg-5"
         >
           <h2>My Rockets</h2>
-          <ListGroup>
-            <ListGroup.Item>Cras justo odio</ListGroup.Item>
-            <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-            <ListGroup.Item>Morbi leo risus</ListGroup.Item>
-            <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
-            <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-          </ListGroup>
+          <section className={styles.section}>
+            <ul className={styles.list}>
+              {reservedRockets.map((e) => (
+                <li key={e.rocket_id} className={styles.listItem}>
+                  {e.rocket_name}
+                </li>
+              ))}
+            </ul>
+          </section>
 
         </Col>
 
