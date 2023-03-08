@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+}
+
+nav {
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+nav img {
+  width: 80px;
+}
+
+nav .logo {
+  align-items: center;
+  gap: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  gap: 1rem;
+}
+
+nav .link {
+  text-decoration: none;
+  color: blue;
+}

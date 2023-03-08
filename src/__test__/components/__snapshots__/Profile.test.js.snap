@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile renders correctly for reserved state 1`] = `
+<div
+  className="px-2 pr-2"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="ps-lg-5 col-lg-6 col-md-6 col-sm-12"
+    >
+      <h2>
+        My Missions
+      </h2>
+      <div
+        className="list-group"
+        onKeyDown={[Function]}
+      />
+    </div>
+    <div
+      className="pe-lg-5 col-lg-6 col-md-6 col-sm-12"
+    >
+      <h2>
+        My Rockets
+      </h2>
+      <section
+        className="section"
+      >
+        <ul
+          className="list"
+        />
+      </section>
+    </div>
+  </div>
+</div>
+`;

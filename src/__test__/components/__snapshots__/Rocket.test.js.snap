@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MissionsTable renders correctly 1`] = `
+<div
+  className="rocketflex"
+>
+  <div
+    className="imgdiv"
+  >
+    <img
+      className="img"
+    />
+  </div>
+  <div>
+    <h1
+      className="name"
+    />
+    <p
+      className="desc"
+    />
+    <button
+      className="reservebtn"
+      onClick={[Function]}
+      type="button"
+    >
+      Reserve Rocket
+    </button>
+  </div>
+</div>
+`;
